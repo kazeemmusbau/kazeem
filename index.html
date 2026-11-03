@@ -24,41 +24,45 @@
     nav { display:flex; align-items:center; gap:34px; color:#c0c6cf; font-size:12px; }
     nav a { transition:color .2s; } nav a:hover, nav a.active { color:var(--orange); }
     .nav-cta { border:1px solid rgba(245,154,35,.7); padding:11px 20px; border-radius:30px; font-size:11px; letter-spacing:.06em; }
-    .hero { min-height:650px; display:grid; grid-template-columns:1.02fr .98fr; align-items:center; gap:40px; padding:62px 0 72px; }
+    .hero { min-height:650px; display:grid; grid-template-columns:1fr 1fr; align-items:stretch; gap:24px; padding:62px 0 58px; }
+    .hero-card { min-width:0; min-height:520px; border:1px solid var(--line); border-radius:22px; overflow:hidden; position:relative; }
+    .hero-copy { padding:54px 48px; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; background:linear-gradient(145deg,rgba(22,29,40,.98),rgba(13,18,26,.98)); box-shadow:0 24px 70px rgba(0,0,0,.24); }
+    .hero-copy:after { content:""; position:absolute; width:260px; height:260px; border-radius:50%; right:-155px; bottom:-155px; border:1px solid rgba(245,154,35,.16); box-shadow:0 0 0 28px rgba(245,154,35,.025),0 0 0 58px rgba(245,154,35,.02); pointer-events:none; }
     .eyebrow { display:flex; align-items:center; gap:10px; color:var(--orange); font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
     .eyebrow:before { content:""; width:28px; height:1px; background:var(--orange); }
-    h1 { font-family:"Space Grotesk",sans-serif; font-size:clamp(48px,6.1vw,76px); line-height:1.04; letter-spacing:-.065em; margin:22px 0 15px; max-width:650px; }
+    h1 { font-family:"Space Grotesk",sans-serif; font-size:clamp(48px,5.4vw,72px); line-height:1.04; letter-spacing:-.065em; margin:22px 0 13px; }
     h1 span { color:var(--orange); }
-    .role { font-size:clamp(18px,2vw,23px); color:#d6dbe2; margin:0 0 18px; }
+    .role { font-size:clamp(17px,1.8vw,22px); color:#d6dbe2; margin:0 0 18px; }
     .role b { color:var(--orange); font-weight:500; }
-    .intro { color:var(--muted); font-size:15px; line-height:1.85; max-width:500px; margin:0; }
-    .actions { display:flex; gap:14px; flex-wrap:wrap; margin-top:32px; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:15px 21px; border-radius:7px; font-size:12px; font-weight:700; transition:transform .2s,box-shadow .2s,border-color .2s; }
+    .intro { color:var(--muted); font-size:14px; line-height:1.9; max-width:490px; margin:0; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:29px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:14px 17px; border-radius:7px; font-size:11px; font-weight:700; letter-spacing:.025em; transition:transform .2s,box-shadow .2s,border-color .2s; }
     .btn:hover { transform:translateY(-3px); }
     .btn-primary { color:#17100a; background:linear-gradient(110deg,#ffb33e,#ed8612); box-shadow:0 8px 30px rgba(245,154,35,.2); }
     .btn-secondary { border:1px solid rgba(255,255,255,.2); color:#eef1f5; }
     .btn-secondary:hover { border-color:var(--orange); }
-    .availability { display:flex; align-items:center; gap:9px; margin-top:30px; color:#aeb7c3; font-size:11px; letter-spacing:.04em; }
+    .availability { display:flex; align-items:center; gap:9px; margin-top:27px; color:#aeb7c3; font-size:10px; letter-spacing:.06em; }
     .dot { width:7px; height:7px; border-radius:50%; background:#67cf8c; box-shadow:0 0 12px rgba(103,207,140,.65); }
-    .socials { display:flex; gap:10px; margin-top:25px; }
-    .socials a { width:34px; height:34px; border:1px solid var(--line); border-radius:7px; display:grid; place-items:center; color:#c4cbd4; font-size:12px; font-weight:700; transition:.2s; }
+    .socials { display:flex; gap:9px; margin-top:22px; }
+    .socials a { width:33px; height:33px; border:1px solid var(--line); border-radius:7px; display:grid; place-items:center; color:#c4cbd4; font-size:12px; font-weight:700; transition:.2s; }
     .socials a:hover { color:var(--orange); border-color:var(--orange); }
-    .visual { min-height:470px; position:relative; display:grid; place-items:center; isolation:isolate; }
-    .visual:before,.visual:after { content:""; position:absolute; border:1px solid rgba(245,154,35,.25); border-radius:50%; width:390px; height:390px; z-index:-1; }
-    .visual:after { width:470px; height:470px; border-color:rgba(255,255,255,.07); }
-    .orbit { position:absolute; width:440px; height:440px; border:1px dashed rgba(245,154,35,.28); border-radius:50%; animation:spin 38s linear infinite; }
-    @keyframes spin { to { transform:rotate(360deg); } }
-    .portrait-card { width:min(340px,78%); height:410px; position:relative; overflow:hidden; display:flex; align-items:flex-end; justify-content:center; border:1px solid rgba(255,255,255,.12); border-radius:170px 170px 24px 24px; background:radial-gradient(ellipse at 50% 32%,rgba(245,154,35,.22),transparent 48%),linear-gradient(145deg,#202936,#10151d 65%); box-shadow:0 35px 100px rgba(0,0,0,.55); }
-    .portrait-card:before { content:""; position:absolute; width:220px; height:220px; border-radius:50%; top:56px; background:linear-gradient(145deg,#f8b44e,#a95318); opacity:.22; filter:blur(2px); }
-    .monogram { position:relative; z-index:1; font-family:"Space Grotesk",sans-serif; font-size:220px; line-height:.83; font-weight:700; letter-spacing:-.12em; padding-right:28px; color:transparent; -webkit-text-stroke:2px rgba(255,255,255,.72); text-shadow:0 12px 50px rgba(245,154,35,.18); }
-    .portrait-label { position:absolute; bottom:24px; left:24px; right:24px; display:flex; justify-content:space-between; align-items:center; color:#cbd2dc; font-size:10px; letter-spacing:.14em; text-transform:uppercase; }
-    .tech { position:absolute; z-index:3; display:flex; align-items:center; gap:9px; padding:11px 14px; background:rgba(17,23,32,.92); border:1px solid rgba(255,255,255,.1); border-radius:8px; color:#e2e7ed; font-size:11px; box-shadow:0 12px 35px rgba(0,0,0,.3); backdrop-filter:blur(10px); }
-    .tech i { width:8px; height:8px; border-radius:2px; background:var(--orange); box-shadow:0 0 12px rgba(245,154,35,.6); }
-    .tech.one { top:70px; left:0; } .tech.two { top:135px; right:-8px; } .tech.three { bottom:105px; left:-10px; } .tech.four { bottom:45px; right:5px; }
+    .image-card { display:flex; align-items:center; justify-content:center; padding:22px; background:radial-gradient(ellipse at 50% 42%,rgba(245,154,35,.17),transparent 52%),linear-gradient(145deg,#151c27,#0d1219); box-shadow:0 24px 70px rgba(0,0,0,.3); }
+    .image-card:before,.image-card:after { content:""; position:absolute; width:390px; height:390px; border:1px solid rgba(245,154,35,.19); border-radius:50%; pointer-events:none; }
+    .image-card:after { width:470px; height:470px; border-color:rgba(255,255,255,.06); }
+    .image-frame { position:relative; z-index:1; width:100%; height:100%; min-height:470px; overflow:hidden; border:1px solid rgba(255,255,255,.1); border-radius:15px; background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.008)); display:grid; place-items:center; }
+    .photo-placeholder { width:100%; height:100%; min-height:470px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; text-align:center; padding:25px; color:#9da8b6; }
+    .photo-placeholder svg { width:62px; height:62px; color:var(--orange); opacity:.9; }
+    .photo-placeholder strong { display:block; color:#e7ebf1; font-family:"Space Grotesk",sans-serif; font-size:18px; font-weight:600; }
+    .photo-placeholder span { font-size:12px; line-height:1.6; max-width:230px; }
+    .profile-image { display:block; width:100%; height:100%; min-height:470px; object-fit:cover; object-position:center top; }
+    .image-tag { position:absolute; z-index:2; display:flex; align-items:center; gap:9px; padding:11px 14px; background:rgba(17,23,32,.94); border:1px solid rgba(255,255,255,.1); border-radius:8px; color:#e2e7ed; font-size:11px; box-shadow:0 12px 35px rgba(0,0,0,.3); backdrop-filter:blur(10px); }
+    .image-tag i { width:8px; height:8px; border-radius:2px; background:var(--orange); box-shadow:0 0 12px rgba(245,154,35,.6); }
+    .image-tag.top { top:44px; left:0; }
+    .image-tag.bottom { bottom:44px; right:0; }
     .hero-foot { border-top:1px solid var(--line); padding:20px 0; display:flex; justify-content:space-between; color:#7f8996; font-size:10px; letter-spacing:.13em; text-transform:uppercase; }
     .hero-foot strong { color:#d9dee5; font-weight:500; }
-    @media(max-width:850px) { nav { gap:18px; } .hero { gap:10px; } .visual:after { width:390px;height:390px; } .orbit { width:360px;height:360px; } }
-    @media(max-width:680px) { .shell { width:min(100% - 36px,520px); } header { height:70px; } nav { display:none; } .hero { grid-template-columns:1fr; padding:62px 0 38px; gap:20px; } h1 { font-size:clamp(48px,13vw,68px); } .intro { font-size:14px; } .visual { min-height:430px; margin-top:4px; } .portrait-card { height:360px; width:270px; } .monogram { font-size:190px; } .visual:before { width:320px;height:320px; } .visual:after { width:370px;height:370px; } .orbit { width:340px;height:340px; } .tech.one { left:0;top:55px; } .tech.two { right:-2px;top:110px; } .tech.three { left:-2px;bottom:85px; } .tech.four { right:0;bottom:35px; } .hero-foot { gap:12px; flex-wrap:wrap; } }
+    @media(max-width:900px) { nav { gap:16px; } .hero { grid-template-columns:1fr 1fr; gap:16px; } .hero-copy { padding:40px 30px; } .btn { padding:13px 14px; font-size:10px; } }
+    @media(max-width:680px) { .shell { width:min(100% - 36px,520px); } header { height:70px; } nav { display:none; } .hero { grid-template-columns:1fr; padding:38px 0 34px; gap:16px; } .hero-card { min-height:0; } .hero-copy { padding:38px 27px; } h1 { font-size:clamp(48px,13vw,68px); } .intro { font-size:13px; } .actions { gap:10px; } .btn { padding:13px 14px; } .image-card { min-height:390px; padding:14px; } .image-frame,.photo-placeholder,.profile-image { min-height:360px; } .image-card:before { width:300px;height:300px; } .image-card:after { width:350px;height:350px; } .image-tag.top { top:28px;left:6px; } .image-tag.bottom { bottom:28px;right:6px; } .hero-foot { gap:12px; flex-wrap:wrap; } }
     @media(prefers-reduced-motion:reduce) { *,*:before,*:after { animation:none!important; scroll-behavior:auto!important; transition:none!important; } }
   </style>
 </head>
@@ -73,29 +77,41 @@
     </header>
 
     <main id="home" class="hero">
-      <section class="hero-copy">
+      <!-- LEFT CARD: introduction, role, CTAs and social links -->
+      <section class="hero-card hero-copy">
         <div class="eyebrow">HELLO, I'M</div>
         <h1>Kazeem<span>.</span></h1>
         <p class="role">Wix Website Designer <b>&amp; Developer</b></p>
         <p class="intro">I create modern, engaging Wix websites that help businesses stand out, connect with their audience, and turn more visitors into customers. Bringing ideas to life with 3 years of hands-on experience.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="mailto:hello@kazeem.dev?subject=Let's%20discuss%20a%20website%20project">LET'S DISCUSS YOUR PROJECT <span>→</span></a>
+          <a class="btn btn-primary" href="#contact">LET'S DISCUSS YOUR PROJECT <span>→</span></a>
           <a class="btn btn-secondary" href="#projects">VIEW MY WORK <span>↗</span></a>
         </div>
         <div class="availability"><span class="dot"></span> AVAILABLE FOR NEW PROJECTS</div>
-        <div class="socials" aria-label="Social links"><a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a><a href="https://github.com/kazeemmusbau" aria-label="GitHub">⌘</a><a href="mailto:hello@kazeem.dev" aria-label="Email">✉</a></div>
+        <div class="socials" aria-label="Social links">
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
+          <a href="https://github.com/kazeemmusbau" aria-label="GitHub">⌘</a>
+          <a href="#contact" aria-label="Contact">✉</a>
+        </div>
       </section>
 
-      <section class="visual" aria-label="Kazeem profile graphic">
-        <div class="orbit"></div>
-        <div class="tech one"><i></i> Wix Studio</div>
-        <div class="tech two"><i></i> Responsive Design</div>
-        <div class="tech three"><i></i> Wix CMS</div>
-        <div class="tech four"><i></i> SEO &amp; Optimization</div>
-        <div class="portrait-card">
-          <div class="monogram">K</div>
-          <div class="portrait-label"><span>Creative Developer</span><span>01 / 04</span></div>
+      <!-- RIGHT CARD: replace the placeholder below with your image when ready.
+           Example: <img class="profile-image" src="kazeem.jpg" alt="Kazeem, Wix Developer"> -->
+      <section class="hero-card image-card" aria-label="Kazeem profile image">
+        <div class="image-tag top"><i></i> WIX WEBSITE DEVELOPER</div>
+        <div class="image-frame">
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <rect x="7" y="10" width="50" height="44" rx="7" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="24" cy="26" r="6" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 48l14-13 9 8 7-6 10 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M45 17v10M40 22h10" stroke="#f59a23" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <strong>Your photo goes here</strong>
+            <span>Add your portrait image later. Replace this placeholder with your image file in the HTML.</span>
+          </div>
         </div>
+        <div class="image-tag bottom"><i></i> 3 YEARS EXPERIENCE</div>
       </section>
     </main>
     <div class="hero-foot"><span><strong>03+</strong> YEARS EXPERIENCE</span><span>WIX DESIGN · DEVELOPMENT · OPTIMIZATION</span><span>BUILT WITH PURPOSE <strong>✦</strong></span></div>
