@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b10" />
+  <meta name="description" content="Kazeem is a Wix Developer with 3 years of experience creating modern, user-friendly websites for growing businesses." />
+  <title>Kazeem — Wix Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: dark; --bg:#080b10; --panel:#10151d; --muted:#a4adba; --text:#f5f7fa; --orange:#f59a23; --line:rgba(255,255,255,.09); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; min-height:100vh; background:var(--bg); color:var(--text); font-family:"DM Sans",sans-serif; }
+    body:before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.16; background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:54px 54px; mask-image:linear-gradient(to bottom,black,transparent 85%); }
+    a { color:inherit; text-decoration:none; }
+    .shell { width:min(1180px,calc(100% - 64px)); margin:auto; position:relative; }
+    header { height:82px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+    .brand { display:flex; align-items:center; gap:11px; font-family:"Space Grotesk",sans-serif; font-weight:700; letter-spacing:.04em; }
+    .brand-mark { width:34px; height:34px; display:grid; place-items:center; color:#111; background:var(--orange); border-radius:10px 3px 10px 3px; font-size:18px; font-weight:700; transform:skew(-7deg); }
+    .brand span:last-child { font-size:15px; }
+    nav { display:flex; align-items:center; gap:34px; color:#c0c6cf; font-size:12px; }
+    nav a { transition:color .2s; } nav a:hover, nav a.active { color:var(--orange); }
+    .nav-cta { border:1px solid rgba(245,154,35,.7); padding:11px 20px; border-radius:30px; font-size:11px; letter-spacing:.06em; }
+    .hero { min-height:650px; display:grid; grid-template-columns:1.02fr .98fr; align-items:center; gap:40px; padding:62px 0 72px; }
+    .eyebrow { display:flex; align-items:center; gap:10px; color:var(--orange); font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+    .eyebrow:before { content:""; width:28px; height:1px; background:var(--orange); }
+    h1 { font-family:"Space Grotesk",sans-serif; font-size:clamp(48px,6.1vw,76px); line-height:1.04; letter-spacing:-.065em; margin:22px 0 15px; max-width:650px; }
+    h1 span { color:var(--orange); }
+    .role { font-size:clamp(18px,2vw,23px); color:#d6dbe2; margin:0 0 18px; }
+    .role b { color:var(--orange); font-weight:500; }
+    .intro { color:var(--muted); font-size:15px; line-height:1.85; max-width:500px; margin:0; }
+    .actions { display:flex; gap:14px; flex-wrap:wrap; margin-top:32px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:15px 21px; border-radius:7px; font-size:12px; font-weight:700; transition:transform .2s,box-shadow .2s,border-color .2s; }
+    .btn:hover { transform:translateY(-3px); }
+    .btn-primary { color:#17100a; background:linear-gradient(110deg,#ffb33e,#ed8612); box-shadow:0 8px 30px rgba(245,154,35,.2); }
+    .btn-secondary { border:1px solid rgba(255,255,255,.2); color:#eef1f5; }
+    .btn-secondary:hover { border-color:var(--orange); }
+    .availability { display:flex; align-items:center; gap:9px; margin-top:30px; color:#aeb7c3; font-size:11px; letter-spacing:.04em; }
+    .dot { width:7px; height:7px; border-radius:50%; background:#67cf8c; box-shadow:0 0 12px rgba(103,207,140,.65); }
+    .socials { display:flex; gap:10px; margin-top:25px; }
+    .socials a { width:34px; height:34px; border:1px solid var(--line); border-radius:7px; display:grid; place-items:center; color:#c4cbd4; font-size:12px; font-weight:700; transition:.2s; }
+    .socials a:hover { color:var(--orange); border-color:var(--orange); }
+    .visual { min-height:470px; position:relative; display:grid; place-items:center; isolation:isolate; }
+    .visual:before,.visual:after { content:""; position:absolute; border:1px solid rgba(245,154,35,.25); border-radius:50%; width:390px; height:390px; z-index:-1; }
+    .visual:after { width:470px; height:470px; border-color:rgba(255,255,255,.07); }
+    .orbit { position:absolute; width:440px; height:440px; border:1px dashed rgba(245,154,35,.28); border-radius:50%; animation:spin 38s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .portrait-card { width:min(340px,78%); height:410px; position:relative; overflow:hidden; display:flex; align-items:flex-end; justify-content:center; border:1px solid rgba(255,255,255,.12); border-radius:170px 170px 24px 24px; background:radial-gradient(ellipse at 50% 32%,rgba(245,154,35,.22),transparent 48%),linear-gradient(145deg,#202936,#10151d 65%); box-shadow:0 35px 100px rgba(0,0,0,.55); }
+    .portrait-card:before { content:""; position:absolute; width:220px; height:220px; border-radius:50%; top:56px; background:linear-gradient(145deg,#f8b44e,#a95318); opacity:.22; filter:blur(2px); }
+    .monogram { position:relative; z-index:1; font-family:"Space Grotesk",sans-serif; font-size:220px; line-height:.83; font-weight:700; letter-spacing:-.12em; padding-right:28px; color:transparent; -webkit-text-stroke:2px rgba(255,255,255,.72); text-shadow:0 12px 50px rgba(245,154,35,.18); }
+    .portrait-label { position:absolute; bottom:24px; left:24px; right:24px; display:flex; justify-content:space-between; align-items:center; color:#cbd2dc; font-size:10px; letter-spacing:.14em; text-transform:uppercase; }
+    .tech { position:absolute; z-index:3; display:flex; align-items:center; gap:9px; padding:11px 14px; background:rgba(17,23,32,.92); border:1px solid rgba(255,255,255,.1); border-radius:8px; color:#e2e7ed; font-size:11px; box-shadow:0 12px 35px rgba(0,0,0,.3); backdrop-filter:blur(10px); }
+    .tech i { width:8px; height:8px; border-radius:2px; background:var(--orange); box-shadow:0 0 12px rgba(245,154,35,.6); }
+    .tech.one { top:70px; left:0; } .tech.two { top:135px; right:-8px; } .tech.three { bottom:105px; left:-10px; } .tech.four { bottom:45px; right:5px; }
+    .hero-foot { border-top:1px solid var(--line); padding:20px 0; display:flex; justify-content:space-between; color:#7f8996; font-size:10px; letter-spacing:.13em; text-transform:uppercase; }
+    .hero-foot strong { color:#d9dee5; font-weight:500; }
+    @media(max-width:850px) { nav { gap:18px; } .hero { gap:10px; } .visual:after { width:390px;height:390px; } .orbit { width:360px;height:360px; } }
+    @media(max-width:680px) { .shell { width:min(100% - 36px,520px); } header { height:70px; } nav { display:none; } .hero { grid-template-columns:1fr; padding:62px 0 38px; gap:20px; } h1 { font-size:clamp(48px,13vw,68px); } .intro { font-size:14px; } .visual { min-height:430px; margin-top:4px; } .portrait-card { height:360px; width:270px; } .monogram { font-size:190px; } .visual:before { width:320px;height:320px; } .visual:after { width:370px;height:370px; } .orbit { width:340px;height:340px; } .tech.one { left:0;top:55px; } .tech.two { right:-2px;top:110px; } .tech.three { left:-2px;bottom:85px; } .tech.four { right:0;bottom:35px; } .hero-foot { gap:12px; flex-wrap:wrap; } }
+    @media(prefers-reduced-motion:reduce) { *,*:before,*:after { animation:none!important; scroll-behavior:auto!important; transition:none!important; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="brand" href="#" aria-label="Kazeem home"><span class="brand-mark">K</span><span>KAZEEM<span style="color:var(--orange)">.</span></span></a>
+      <nav aria-label="Main navigation">
+        <a class="active" href="#home">HOME</a><a href="#about">ABOUT</a><a href="#services">SERVICES</a><a href="#skills">SKILLS</a><a href="#projects">PROJECTS</a><a href="#contact">CONTACT</a>
+      </nav>
+      <a class="nav-cta" href="mailto:hello@kazeem.dev?subject=Let's%20discuss%20a%20website%20project">LET'S TALK ↗</a>
+    </header>
+
+    <main id="home" class="hero">
+      <section class="hero-copy">
+        <div class="eyebrow">HELLO, I'M</div>
+        <h1>Kazeem<span>.</span></h1>
+        <p class="role">Wix Website Designer <b>&amp; Developer</b></p>
+        <p class="intro">I create modern, engaging Wix websites that help businesses stand out, connect with their audience, and turn more visitors into customers. Bringing ideas to life with 3 years of hands-on experience.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:hello@kazeem.dev?subject=Let's%20discuss%20a%20website%20project">LET'S DISCUSS YOUR PROJECT <span>→</span></a>
+          <a class="btn btn-secondary" href="#projects">VIEW MY WORK <span>↗</span></a>
+        </div>
+        <div class="availability"><span class="dot"></span> AVAILABLE FOR NEW PROJECTS</div>
+        <div class="socials" aria-label="Social links"><a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a><a href="https://github.com/kazeemmusbau" aria-label="GitHub">⌘</a><a href="mailto:hello@kazeem.dev" aria-label="Email">✉</a></div>
+      </section>
+
+      <section class="visual" aria-label="Kazeem profile graphic">
+        <div class="orbit"></div>
+        <div class="tech one"><i></i> Wix Studio</div>
+        <div class="tech two"><i></i> Responsive Design</div>
+        <div class="tech three"><i></i> Wix CMS</div>
+        <div class="tech four"><i></i> SEO &amp; Optimization</div>
+        <div class="portrait-card">
+          <div class="monogram">K</div>
+          <div class="portrait-label"><span>Creative Developer</span><span>01 / 04</span></div>
+        </div>
+      </section>
+    </main>
+    <div class="hero-foot"><span><strong>03+</strong> YEARS EXPERIENCE</span><span>WIX DESIGN · DEVELOPMENT · OPTIMIZATION</span><span>BUILT WITH PURPOSE <strong>✦</strong></span></div>
+  </div>
+</body>
+</html>
