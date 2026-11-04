@@ -91,6 +91,38 @@
     .services-bottom a { flex:none; color:var(--orange); font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
     @media(max-width:850px) { .services-grid { gap:13px; } .service-card { padding:24px 20px 22px; min-height:320px; } .service-card h3 { font-size:19px; } .section-heading { align-items:flex-start; flex-direction:column; gap:15px; } }
     @media(max-width:680px) { .services-section { padding:61px 0 70px; } .section-heading { margin-bottom:25px; } .services-grid { grid-template-columns:1fr; gap:13px; } .service-card { min-height:255px; padding:24px; } .service-topline { margin-bottom:22px; } .services-bottom { align-items:flex-start; flex-direction:column; padding:18px; } }
+
+    /* ABOUT, SKILLS, PROJECTS & CONTACT */
+    .content-section { padding:82px 0 92px; border-top:1px solid var(--line); }
+    .about-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:44px; align-items:start; }
+    .about-panel,.skill-panel,.project-card,.contact-panel { border:1px solid var(--line); border-radius:16px; background:linear-gradient(150deg,rgba(22,29,40,.96),rgba(13,18,26,.96)); }
+    .about-panel { padding:30px; min-height:250px; }
+    .about-mark { color:var(--orange); font:700 64px/1 "Space Grotesk",sans-serif; letter-spacing:-.08em; }
+    .about-panel p,.about-copy p { color:var(--muted); font-size:14px; line-height:1.9; }
+    .about-copy p { margin:0 0 17px; }
+    .about-copy .lead { color:#e8edf3; font-size:17px; line-height:1.7; }
+    .skills-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .skill-panel { padding:22px; }
+    .skill-panel h3 { margin:0 0 10px; color:#f4a53b; font:600 16px "Space Grotesk",sans-serif; }
+    .skill-panel p { margin:0; color:var(--muted); font-size:12px; line-height:1.8; }
+    .skill-tags { display:flex; flex-wrap:wrap; gap:9px; margin-top:25px; }
+    .skill-tags span { padding:9px 12px; border:1px solid var(--line); border-radius:30px; color:#dce2e9; font-size:11px; }
+    .projects-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:17px; }
+    .project-card { overflow:hidden; }
+    .project-art { min-height:175px; padding:22px; display:flex; align-items:flex-end; background:radial-gradient(circle at 75% 20%,rgba(245,154,35,.24),transparent 40%),linear-gradient(135deg,#202a38,#111720); border-bottom:1px solid var(--line); }
+    .project-art span { color:rgba(255,255,255,.85); font:600 26px "Space Grotesk",sans-serif; letter-spacing:-.05em; }
+    .project-info { padding:20px; }
+    .project-info small { color:var(--orange); font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    .project-info h3 { margin:9px 0; font:600 18px "Space Grotesk",sans-serif; }
+    .project-info p { margin:0; color:var(--muted); font-size:12px; line-height:1.8; }
+    .project-note { margin:20px 0 0; color:#8e99a7; font-size:11px; line-height:1.7; }
+    .contact-panel { padding:38px; display:flex; justify-content:space-between; align-items:center; gap:25px; }
+    .contact-panel p { max-width:570px; margin:13px 0 0; color:var(--muted); font-size:13px; line-height:1.8; }
+    .contact-panel .btn { flex:none; }
+    footer { padding:24px 0 30px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:16px; color:#7f8996; font-size:10px; }
+    @media(max-width:850px) { .about-grid { grid-template-columns:1fr; gap:18px; } .skills-grid,.projects-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:680px) { .content-section { padding:62px 0 70px; } .skills-grid,.projects-grid { grid-template-columns:1fr; } .contact-panel { padding:25px; align-items:flex-start; flex-direction:column; } footer { flex-direction:column; } }
+
   </style>
 </head>
 <body>
@@ -201,6 +233,58 @@
         <a href="mailto:hello@kazeem.dev?subject=Let's%20discuss%20my%20website%20project">Start a conversation ↗</a>
       </div>
     </section>
+
+    <section id="about" class="content-section" aria-labelledby="about-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">A LITTLE ABOUT ME</p><h2 class="section-title" id="about-title">Designing with <span>purpose.</span></h2></div>
+        <p class="section-description">A thoughtful approach to websites: clear structure, useful experiences, and design that supports business goals.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-panel"><div class="about-mark">K.</div><p>Wix Website Designer &amp; Developer<br/>3 years of hands-on experience</p></div>
+        <div class="about-copy">
+          <p class="lead">I help businesses build a stronger online presence through clean, engaging, and easy-to-use Wix websites.</p>
+          <p>My work brings together visual design, practical website functionality, and a focus on the people using the site. I believe a good website should not only look professional, but also make it easy for visitors to understand what a business offers and what to do next.</p>
+          <p>Whether you are starting from scratch or improving an existing website, I focus on creating an experience that feels right for your brand and works smoothly across devices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="content-section" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">WHAT I BRING TO THE TABLE</p><h2 class="section-title" id="skills-title">Skills &amp; <span>expertise.</span></h2></div>
+        <p class="section-description">The core skills I use to plan, design, build, and improve business websites.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-panel"><h3>Wix Website Design</h3><p>Brand-aligned layouts, page structure, visual hierarchy, and responsive design.</p></article>
+        <article class="skill-panel"><h3>Wix Development</h3><p>Building pages, organizing site content, and setting up practical website features.</p></article>
+        <article class="skill-panel"><h3>Wix SEO</h3><p>On-page foundations including metadata, headings, image alt text, and SEO settings.</p></article>
+        <article class="skill-panel"><h3>Responsive Design</h3><p>Creating clear, usable experiences across desktop, tablet, and mobile screens.</p></article>
+        <article class="skill-panel"><h3>CMS &amp; Content</h3><p>Structuring content and collections so information is easier to manage and navigate.</p></article>
+        <article class="skill-panel"><h3>Website Optimization</h3><p>Improving page clarity, navigation, calls to action, and the visitor journey.</p></article>
+      </div>
+      <div class="skill-tags"><span>Wix</span><span>Website Redesign</span><span>Landing Pages</span><span>On-page SEO</span><span>Mobile Optimization</span><span>UI Design</span></div>
+    </section>
+
+    <section id="projects" class="content-section" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">SELECTED WORK</p><h2 class="section-title" id="projects-title">Projects &amp; <span>approach.</span></h2></div>
+        <p class="section-description">A snapshot of the types of website projects I can help bring to life.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card"><div class="project-art"><span>01 / Brand</span></div><div class="project-info"><small>Website design</small><h3>Business Website</h3><p>A polished online home for a business, with clear messaging, structured pages, and strong calls to action.</p></div></article>
+        <article class="project-card"><div class="project-art"><span>02 / Growth</span></div><div class="project-info"><small>Website development</small><h3>Service-Based Website</h3><p>A user-friendly service experience that helps visitors explore offers, understand value, and get in touch.</p></div></article>
+        <article class="project-card"><div class="project-art"><span>03 / Visibility</span></div><div class="project-info"><small>SEO &amp; optimization</small><h3>Website Improvement</h3><p>A focused improvement process for page structure, search visibility foundations, and visitor experience.</p></div></article>
+      </div>
+      <p class="project-note">These are representative project categories, not named client case studies. Add real project screenshots and details here as your portfolio grows.</p>
+    </section>
+
+    <section id="contact" class="content-section" aria-labelledby="contact-title">
+      <div class="contact-panel">
+        <div><p class="section-kicker">LET'S WORK TOGETHER</p><h2 class="section-title" id="contact-title">Have a project in <span>mind?</span></h2><p>Tell me a little about your website, your goals, and what you would like to improve. Let's start a conversation.</p></div>
+        <a class="btn btn-primary" href="mailto:hello@kazeem.dev?subject=Website%20project%20inquiry">GET IN TOUCH <span>↗</span></a>
+      </div>
+    </section>
+    <footer><span>© 2026 Kazeem. All rights reserved.</span><span>WIX DESIGN · DEVELOPMENT · OPTIMIZATION</span></footer>
   </div>
 </body>
 </html>
